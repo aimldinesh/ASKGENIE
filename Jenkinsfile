@@ -3,7 +3,7 @@ pipeline {
     environment {
         DOCKER_HUB_REPO = "dkc12345/askgenie"
         DOCKER_HUB_CREDENTIALS_ID = "dockerhub-token"
-        IMAGE_TAG = "v2${BUILD_NUMBER}"
+        IMAGE_TAG = "v${BUILD_NUMBER}"
     }
     stages {
         stage('Checkout Github') {
