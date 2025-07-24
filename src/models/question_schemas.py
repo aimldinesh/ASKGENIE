@@ -1,0 +1,43 @@
+from typing import List
+from pydantic import BaseModel, Field, validator
+
+
+class MCQQuestion(BaseModel):
+    """
+    Schema for a Multiple-Choice Question.
+    """
+
+    question: str = Field(description="The question text.")
+    options: List[str] = Field(description="List of 4 options.")
+    correct_answer: str = Field(description="The correct answer from the options.")
+
+    @validator("question", pre=True)
+    def clean_question(cls, v):
+        """
+        Cleans and normalizes the question field.
+
+        Handles input as either string or a dict with 'description'.
+        """
+        if isinstance(v, dict):
+            return v.get("description", str(v))
+        return str(v)
+
+
+class FillBlankQuestion(BaseModel):
+    """
+    Schema for a Fill-in-the-Blank Question.
+    """
+
+    question: str = Field(description="The question text with '___' for the blank.")
+    answer: str = Field(description="The correct word or phrase for the blank.")
+
+    @validator("question", pre=True)
+    def clean_question(cls, v):
+        """
+        Cleans and normalizes the question field.
+
+        Handles input as either string or a dict with 'description'.
+        """
+        if isinstance(v, dict):
+            return v.get("description", str(v))
+        return str(v)
