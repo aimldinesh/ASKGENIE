@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: llmops-app
-        image: dkc12345/askgenie:v2
+        image: dkc12345/askgenie:latest
         ports:
         - containerPort: 8501
         env:
