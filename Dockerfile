@@ -26,4 +26,4 @@ RUN pip install --no-cache-dir -e .
 EXPOSE 8501
 
 ## ▶️ Command to run your Streamlit application inside Docker
-CMD ["streamlit", "run", "application.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.headless=true"]
+CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.headless=true"]
