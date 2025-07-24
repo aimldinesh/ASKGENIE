@@ -30,31 +30,7 @@ pipeline {
                 }
             }
         }
-         /* stage('Update Deployment YAML with New Tag') {
-            steps {
-                script {
-                    sh """
-                    sed -i 's|image: dkc12345/askgenie:.*|image: dkc12345/askgenie:${IMAGE_TAG}|' manifests/deployment.yaml
-                    """
-                }
-            }
-        }
-
-        stage('Commit Updated YAML') {
-            steps {
-                script {
-                    withCredentials([usernamePassword(credentialsId: 'github-token', usernameVariable: 'GIT_USER', passwordVariable: 'GIT_PASS')]) {
-                        sh '''
-                        git config user.name "data-guru0"
-                        git config user.email "gyrogodnon@gmail.com"
-                        git add manifests/deployment.yaml
-                        git commit -m "Update image tag to ${IMAGE_TAG}" || echo "No changes to commit"
-                        git push https://${GIT_USER}:${GIT_PASS}@github.com/aimldinesh/ASKGENIE.git HEAD:main
-                        '''
-                    }
-                }
-            }
-        } */
+    
         stage('Install Kubectl & ArgoCD CLI Setup') {
             steps {
                 sh '''
