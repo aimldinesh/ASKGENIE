@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: llmops-app
-        image: dkc12345/askgenie:__IMAGE_TAG__
+        image: dkc12345/askgenie:v19
         ports:
         - containerPort: 8501
         env:
