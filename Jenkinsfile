@@ -48,15 +48,9 @@ pipeline {
                         sh '''
                         git config user.name "aimldinesh"
                         git config user.email "dinesh3029nitrr@gmail.com"
-
-                        git add manifests/deployment.yaml || true
-
-                        if ! git diff --cached --quiet; then
-                            git commit -m "Update image tag to ${IMAGE_TAG}"
-                            git push "https://${GIT_USER}:${GIT_PASS}@github.com/aimldinesh/ASKGENIE.git" HEAD:main
-                        else
-                            echo "No changes to commit."
-                        fi
+                        git add manifests/deployment.yaml
+                        git commit -m "Update image tag to ${IMAGE_TAG}" || echo "No changes to commit"
+                        git push https://${GIT_USER}:${GIT_PASS}@github.com/aimldinesh/ASKGENIE.gi HEAD:main
                         '''
                     }
                 }
