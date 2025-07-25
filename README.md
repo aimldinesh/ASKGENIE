@@ -30,47 +30,48 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
 ## 🧱 Project Architecture
 
 ```mermaid
-flowchart TD
-    subgraph "🛠️ Development & Setup"
-        A1[📦 Project/API Setup]
-        A2[⚙️ Configuration Code]
-        A3[📄 Schemas & Models]
-        A4[📝 Prompt Templates]
-        A5[🔌 Groq Client Setup]
-        A6[🧠 Question Generator]
-        A7[🧰 Helper Classes]
-        A1 --> A2 --> A3 --> A4 --> A5 --> A6 --> A7
-    end
+    flowchart TD
+        subgraph "🛠️ Development & Setup"
+            A1[📦 Project/API Setup]
+            A2[⚙️ Configuration Code]
+            A3[📄 Schemas & Models]
+            A4[📝 Prompt Templates]
+            A5[🔌 Groq Client Setup]
+            A6[🧠 Question Generator]
+            A7[🧰 Helper Classes]
+            A1 --> A2 --> A3 --> A4 --> A5 --> A6 --> A7
+        end
 
-    subgraph "💡 Application"
-        B1[🧪 Main Application]
-    end
+        subgraph "💡 Application"
+            B1[🧪 Main Application]
+        end
 
-    subgraph "📦 Versioning & Containerization"
-        C1[📂 Code Versioning]
-        C2[🐳 Dockerfile]
-        C1 --> C2
-    end
+        subgraph "📦 Versioning & Containerization"
+            C1[📂 Code Versioning]
+            C2[🐳 Dockerfile]
+            C1 --> C2
+        end
 
-    subgraph "🚀 Infrastructure Deployment"
-        D1[📦 Kubernetes Manifests]
-        D2[🖥️ GCP VM Setup]
-        D1 --> D2
-    end
+        subgraph "🚀 Infrastructure Deployment"
+            D1[📦 Kubernetes Manifests]
+            D2[🖥️ GCP VM Setup]
+            D1 --> D2
+        end
 
-    subgraph "🔁 CI/CD Pipeline"
-        E1[🔧 Jenkins Setup]
-        E2[🔗 GitHub Integration]
-        E3[📤 Build & Push Image]
-        E4[🚦 ArgoCD Setup]
-        E5[📬 WebHooks]
-        E1 --> E2 --> E3 --> E4 --> E5
-    end
+        subgraph "🔁 CI/CD Pipeline"
+            E1[🔧 Jenkins Setup]
+            E2[🔗 GitHub Integration]
+            E3[📤 Build & Push Image]
+            E4[🚦 ArgoCD Setup]
+            E5[📬 WebHooks]
+            E1 --> E2 --> E3 --> E4 --> E5
+        end
 
-    A7 --> B1
-    B1 --> C1
-    C2 --> D1
-    D2 --> E3
+        A7 --> B1
+        B1 --> C1
+        C2 --> D1
+        D2 --> E3
+
 ```
 ---
 
