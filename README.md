@@ -142,11 +142,19 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
   ![Fill in the Blank](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/Quiz_Generation_ui/app_image_3_fill_in_blank.png)
 
 ---
+## 🔧 Prerequisites
+Before running the project, ensure you have the following installed:
+- Python 3.11+
+- Docker
+- Groq API Key (signup at [Groq Cloud](https://console.groq.com/))
+- GCP VM or Localhost for deployment
+- (Optional) Jenkins, ArgoCD if deploying CI/CD pipeline
+
 ## 🧪 Local Setup
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/AskGenie.git
-cd AskGenie
+git clone https://github.com/aimldinesh/ASKGENIE.git
+cd ASKGENIE
 
 # 2. Create virtual environment & activate
 python -m venv venv
@@ -182,4 +190,6 @@ For detailed end-to-end deployment steps—including Docker build, Kubernetes de
 
 Credit: Huge thanks to Data Guru for the full setup documentation that made this deployment seamless.
 
+## 📄 License
 
+This project is licensed under the [MIT License](./LICENSE).
