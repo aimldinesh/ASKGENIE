@@ -15,6 +15,7 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
 
 ---
 ## 📚 Table of Contents
+- [🔄 Project Workflow ][#-project-workflow]
 - [🧱 Project Architecture](#-project-architecture)
 - [📌 Features](#-features)
 - [🧪 Inputs & Functionality](#-inputs--functionality)
@@ -32,7 +33,7 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
 
 ---
 
-## 🧱 Project Architecture
+## 🔄 Project Workflow
 
 ```mermaid
     flowchart TD
@@ -79,6 +80,38 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
 
 ```
 ---
+
+## 🧱 Project Architecture
+```mermaid
+    graph TD
+        A[🧑 User] -->|Request: Generate Quiz| B[🌐 Streamlit Frontend]
+        B --> C[🧠 Question Generator Logic]
+        C --> D[📦 Prompt Templates + Helper Functions]
+        C --> E[🔗 Groq LLM API (LLaMA-3.1-8B-Instant)]
+
+        E -->|Response: Generated Questions| C
+        C --> B
+        B -->|Render Quiz| A
+
+        subgraph Deployment
+        F[🐳 Docker Container] --> G[Kubernetes Pod (llmops-app)]
+        G --> H[☁️ GCP VM Instance]
+        end
+
+        B --> F
+        F --> G
+        G --> H
+
+        subgraph CI/CD
+        I[🔧 Jenkins] --> J[📥 Build & Push Docker Image]
+        J --> K[🚀 ArgoCD]
+        K --> G
+        end
+
+        H -->|Exposed| A
+```
+---
+
 ## 📌 Features
 
 - 🔍 **Custom Quiz Generation** – Choose **topic**, **question type** (MCQ/Fill in the Blank), **difficulty**, and **number of questions**
