@@ -126,7 +126,7 @@ graph TD
 ```
 ---
 
-## ✅ Step-by-step: How It Works
+## Step-by-step: How It Works
 
 ### 1. 🧑 User Interaction
 The user opens the web interface and sends a request to generate a quiz.  
