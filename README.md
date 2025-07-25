@@ -18,7 +18,7 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
 - [📌 Features](#-features)
 - [🔄 Project Workflow](#-project-workflow)
 - [🧱 Project Architecture](#-project-architecture)
-- [✅ Step-by-step: How It Works](#step-by-step:-how-it-works)
+- [✅ Step-by-step: How It Works](#step-by-step-how-it-works)
 - [🧪 Inputs & Functionality](#-inputs--functionality)
 - [🛠️ Tech Stack](#-tech-stack)
 - [📸 Project Screenshots](#-project-screenshots)
