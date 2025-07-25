@@ -28,6 +28,7 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
 - [🧪 Local Setup](#-local-setup)
 - [🐳 Docker Build & Run](#-docker-build--run)
 - [🛠️ Full CI/CD Deployment Setup Instructions](#️-full-cicd-deployment-setup-instructions)
+- [🤝 Contributors](#-contributors)
 
 ---
 
@@ -204,3 +205,5 @@ For detailed end-to-end deployment steps—including Docker build, Kubernetes de
 
 Credit: Huge thanks to Data Guru for the full setup documentation that made this deployment seamless.
 
+## 🤝 Contributors
+- [Dinesh Chaudhary](https://github.com/aimldinesh)
