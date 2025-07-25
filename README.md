@@ -1,3 +1,10 @@
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/github/license/yourusername/AskGenie)
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![LLM Model](https://img.shields.io/badge/LLM-Groq--LLaMA3--70B-ff69b4)
+![Deployment](https://img.shields.io/badge/deployment-Kubernetes%20on%20GCP-blueviolet)
+![Docker](https://img.shields.io/badge/docker-ready-blue)
+
 # 📘 AskGenie: AI-Powered Quiz Generator
 
 **AskGenie** is a real-time AI-powered quiz and fill-in-the-blank generation app built using **Groq’s Llama 3.1 (70B)** model (`llama3-70b-8192`). Users can instantly generate topic-specific quizzes by selecting the type, difficulty, and number of questions.
