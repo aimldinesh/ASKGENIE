@@ -15,6 +15,21 @@
 This project follows full **MLOps + LLMOps** best practices — it is containerized with **Docker**, orchestrated using **Kubernetes**, and continuously delivered using **Jenkins + ArgoCD**.
 
 ---
+## 📚 Table of Contents
+- [📌 Features](#-features)
+- [🧱 Project Architecture](#-project-architecture)
+- [🧪 Inputs & Functionality](#-inputs--functionality)
+- [🛠️ Tech Stack](#-tech-stack)
+- [📸 Project Screenshots](#-project-screenshots)
+  - [🔧 Jenkins CI/CD Pipeline](#-jenkins-cicd-pipeline)
+  - [🐳 Docker Image Build](#-docker-image-build)
+  - [🚀 ArgoCD Deployment](#-argocd-deployment)
+  - [🎯 AskGenie App UI – Quiz Generation](#-askgenie-app-ui--quiz-generation)
+- [🔧 Prerequisites](#-prerequisites)
+- [🧪 Local Setup](#-local-setup)
+- [🐳 Docker Build & Run](#-docker-build--run)
+- [🛠️ Full CI/CD Deployment Setup Instructions](#️-full-cicd-deployment-setup-instructions)
+- [📄 License](#-license)
 
 ## 📌 Features
 
