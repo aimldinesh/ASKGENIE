@@ -136,9 +136,12 @@ docker build -t askgenie .
 docker run -p 8501:8501 askgenie
 ```
 
-## 🛠️ Full Setup Instructions
+---
 
-For full setup and deployment instructions, check out the [complete_setup_instruction.md](./complete_setup_instruction.md) file.
+## 🛠️ Full CI/CD Deployment Setup Instructions
+
+For detailed setup and deployment steps—including Docker build, Kubernetes deployment on GCP, and CI/CD with Jenkins and ArgoCD—refer to the [📘 complete_setup_instruction.md](./complete_setup_instruction.md).
+
 
 
 

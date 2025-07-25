@@ -835,6 +835,6 @@ http://<VM_EXTERNAL_IP>:9090
 - This completes the full GitOps pipeline successfully and automatically!
 
 ### 🙏 Credits
-- Thanks Data Guru for writing the full deployment and setup instructions.
+- Thanks **Data Guru** for documenting the complete setup process!
 ---
 
