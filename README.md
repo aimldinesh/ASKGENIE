@@ -96,14 +96,56 @@ flowchart TD
 | ☁️ **Cloud**         | Google Cloud VM                     |
 
 ---
+## 📸 Project Screenshots
 
+### 🔧 Jenkins CI/CD Pipeline
+
+- ✅ **Pipeline Start**
+
+  ![Jenkins Pipeline Start](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/Jenkins_pipeline/jenkins%20pipeline%20build%20start.PNG)
+
+- ✅ **Pipeline Success**
+
+  ![Jenkins Pipeline Success](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/Jenkins_pipeline/jenkins%20pipeline%20build%20success.PNG)
+
+---
+
+### 🐳 Docker Image Build
+
+- 📦 **Docker Images Built**
+
+  ![Docker Images](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/Docker_Image/docker_images.PNG)
+
+---
+
+### 🚀 ArgoCD Deployment
+
+- 🔄 **ArgoCD Sync and Health Status**
+
+  ![ArgoCD Sync](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/ArgoCD/argocd_image_1.PNG)
+
+---
+
+### 🎯 AskGenie App UI – Quiz Generation
+
+- 🧠 **MCQ Question Generation – Page 1**
+
+  ![MCQ Image 1](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/Quiz_Generation_ui/app_image_1_mcq.PNG)
+
+- 🧠 **MCQ Question Generation – Page 2**
+
+  ![MCQ Image 2](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/Quiz_Generation_ui/app_image_2_mcq.PNG)
+
+- ✍️ **Fill-in-the-Blank Question Interface**
+
+  ![Fill in the Blank](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/Quiz_Generation_ui/app_image_3_fill_in_blank.png)
 
 ---
 ## 🧪 Local Setup
 ```bash
 # 1. Clone the repository
-git clone https://github.com/aimldinesh/ASKGENIE.git
-cd ASKGENIE
+git clone https://github.com/yourusername/AskGenie.git
+cd AskGenie
 
 # 2. Create virtual environment & activate
 python -m venv venv
@@ -138,4 +180,5 @@ For detailed end-to-end deployment steps—including Docker build, Kubernetes de
 [View Full Setup Instructions →](./complete_setup.md).
 
 Credit: Huge thanks to Data Guru for the full setup documentation that made this deployment seamless.
+
 
