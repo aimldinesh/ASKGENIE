@@ -125,6 +125,7 @@ graph TD
 
 ```
 ---
+
 ## ✅ Step-by-step: How It Works
 
 ### 1. 🧑 User Interaction
