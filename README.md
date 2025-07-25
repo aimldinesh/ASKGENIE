@@ -1,5 +1,3 @@
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/github/license/yourusername/AskGenie)
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![LLM Model](https://img.shields.io/badge/LLM-Groq--LLaMA3--70B-ff69b4)
 ![Deployment](https://img.shields.io/badge/deployment-Kubernetes%20on%20GCP-blueviolet)
@@ -7,6 +5,8 @@
 ![ArgoCD](https://img.shields.io/badge/ArgoCD-Synced-brightgreen?logo=argo)
 ![ArgoCD Dev](https://img.shields.io/badge/ArgoCD--Dev-Synced-brightgreen?logo=argo)
 ![ArgoCD Prod](https://img.shields.io/badge/ArgoCD--Prod-Healthy-brightgreen?logo=argo)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/github/license/yourusername/AskGenie)
 
 # 📘 AskGenie: AI-Powered Quiz Generator
 
@@ -16,8 +16,8 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
 
 ---
 ## 📚 Table of Contents
-- [📌 Features](#-features)
 - [🧱 Project Architecture](#-project-architecture)
+- [📌 Features](#-features)
 - [🧪 Inputs & Functionality](#-inputs--functionality)
 - [🛠️ Tech Stack](#-tech-stack)
 - [📸 Project Screenshots](#-project-screenshots)
@@ -30,15 +30,6 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
 - [🐳 Docker Build & Run](#-docker-build--run)
 - [🛠️ Full CI/CD Deployment Setup Instructions](#️-full-cicd-deployment-setup-instructions)
 - [📄 License](#-license)
-
-## 📌 Features
-
-- 🔍 **Custom Quiz Generation** – Choose **topic**, **question type** (MCQ/Fill in the Blank), **difficulty**, and **number of questions**
-- ⚙️ **Groq LLM Integration** – Uses **Groq API** with `llama3-70b-8192` for fast, context-rich question generation
-- 🎯 **Streamlit UI** – Intuitive, responsive interface for a seamless user experience
-- 🐳 **Dockerized App** – Lightweight, portable, and production-ready
-- ☸️ **Kubernetes Deployment** – Scalable app deployed on **GCP VM** (via Minikube or GKE)
-- 🚀 **CI/CD Pipeline** – End-to-end automation with **Jenkins + ArgoCD + GitHub Webhooks**
 
 ---
 
@@ -88,6 +79,16 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
         D2 --> E3
 
 ```
+---
+## 📌 Features
+
+- 🔍 **Custom Quiz Generation** – Choose **topic**, **question type** (MCQ/Fill in the Blank), **difficulty**, and **number of questions**
+- ⚙️ **Groq LLM Integration** – Uses **Groq API** with `llama3-70b-8192` for fast, context-rich question generation
+- 🎯 **Streamlit UI** – Intuitive, responsive interface for a seamless user experience
+- 🐳 **Dockerized App** – Lightweight, portable, and production-ready
+- ☸️ **Kubernetes Deployment** – Scalable app deployed on **GCP VM** (via Minikube or GKE)
+- 🚀 **CI/CD Pipeline** – End-to-end automation with **Jenkins + ArgoCD + GitHub Webhooks**
+
 ---
 
 ## 🧪 Inputs & Functionality
