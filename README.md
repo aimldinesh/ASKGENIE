@@ -15,9 +15,10 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
 
 ---
 ## 📚 Table of Contents
+- [📌 Features](#-features)
 - [🔄 Project Workflow ][#-project-workflow]
 - [🧱 Project Architecture](#-project-architecture)
-- [📌 Features](#-features)
+- [✅ Step-by-step: How It Works](#step-by-step-how-it-works)
 - [🧪 Inputs & Functionality](#-inputs--functionality)
 - [🛠️ Tech Stack](#-tech-stack)
 - [📸 Project Screenshots](#-project-screenshots)
@@ -30,6 +31,17 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
 - [🐳 Docker Build & Run](#-docker-build--run)
 - [🛠️ Full CI/CD Deployment Setup Instructions](#️-full-cicd-deployment-setup-instructions)
 - [🤝 Contributors](#-contributors)
+
+---
+
+## 📌 Features
+
+- 🔍 **Custom Quiz Generation** – Choose **topic**, **question type** (MCQ/Fill in the Blank), **difficulty**, and **number of questions**
+- ⚙️ **Groq LLM Integration** – Uses **Groq API** with `llama3-70b-8192` for fast, context-rich question generation
+- 🎯 **Streamlit UI** – Intuitive, responsive interface for a seamless user experience
+- 🐳 **Dockerized App** – Lightweight, portable, and production-ready
+- ☸️ **Kubernetes Deployment** – Scalable app deployed on **GCP VM** (via Minikube or GKE)
+- 🚀 **CI/CD Pipeline** – End-to-end automation with **Jenkins + ArgoCD + GitHub Webhooks**
 
 ---
 
@@ -113,15 +125,88 @@ graph TD
 
 ```
 ---
+## ✅ Step-by-step: How It Works
 
-## 📌 Features
+### 1. 🧑 User Interaction
+The user opens the web interface and sends a request to generate a quiz.  
+This request is handled by the **🌐 Streamlit Frontend**, which provides a clean, interactive UI.
 
-- 🔍 **Custom Quiz Generation** – Choose **topic**, **question type** (MCQ/Fill in the Blank), **difficulty**, and **number of questions**
-- ⚙️ **Groq LLM Integration** – Uses **Groq API** with `llama3-70b-8192` for fast, context-rich question generation
-- 🎯 **Streamlit UI** – Intuitive, responsive interface for a seamless user experience
-- 🐳 **Dockerized App** – Lightweight, portable, and production-ready
-- ☸️ **Kubernetes Deployment** – Scalable app deployed on **GCP VM** (via Minikube or GKE)
-- 🚀 **CI/CD Pipeline** – End-to-end automation with **Jenkins + ArgoCD + GitHub Webhooks**
+---
+
+### 2. 🌐 Streamlit Frontend
+The frontend collects inputs like:
+- **Question Type** (MCQ/Descriptive)
+- **Topic** (e.g., Python, History)
+- **Difficulty** (Easy, Medium, Hard)
+- **Number of Questions**
+
+It then sends this input to the **🧠 Question Generator Logic** in the backend.
+
+---
+
+### 3. 🧠 Question Generator Logic
+This is the core engine of the app.  
+It handles:
+- Input validation  
+- Prompt formatting  
+- Calling the LLM API  
+- Parsing the response  
+
+Internally, it uses:
+- 📦 **Prompt Templates**: Pre-defined templates for consistent LLM requests  
+- 🧰 **Helper Functions**: Functions for formatting, error handling, and JSON processing
+
+---
+
+### 4. 🔗 Groq LLM API (LLaMA 3.1 8B Instant)
+- The app sends the formatted prompt to the **Groq API**  
+- Groq uses the `LLaMA-3.1-8B-Instant` model to generate quiz questions  
+- The API returns the questions in structured format (usually JSON or text)
+
+---
+
+### 5. 🔁 Return Flow
+- The generated questions are sent back to the **Question Generator Logic**  
+- They are processed and forwarded to the **Streamlit frontend**, which then:
+  - Displays the questions in the UI  
+  - Supports user attempts and interactivity
+
+---
+
+### 6. 🐳 Docker Containerization
+- The entire application (code + dependencies) is packaged into a **Docker container**  
+- This container is labeled something like `llmops-app` for deployment
+
+---
+
+### 7. ☸️ Kubernetes Deployment
+- The Docker container is deployed to a **Kubernetes Pod**  
+- This allows for:
+  - Scalability  
+  - Reliability  
+  - Self-healing deployments  
+
+- The pod runs on a **☁️ GCP VM instance**, which serves as the cloud host
+
+---
+
+### 8. 🔧 Jenkins CI/CD
+- **Jenkins** automates the build and deployment pipeline:
+  - Detects code pushes on GitHub  
+  - 📥 Builds & pushes the Docker image to a container registry  
+  - Triggers the 🚀 **ArgoCD** workflow
+
+---
+
+### 9. 🚀 ArgoCD Deployment
+- **ArgoCD** monitors the GitHub repo and syncs Kubernetes manifests  
+- Ensures that the latest Docker image is deployed to the cluster
+
+---
+
+### 10. 🌐 Exposure to the User
+- The **Kubernetes service** running on the GCP VM exposes the app via a **public IP or domain**  
+- The user can now access the **live quiz generator app**
 
 ---
 
