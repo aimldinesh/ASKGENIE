@@ -87,24 +87,29 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
 graph TD
     A[🧑 User] -->|Request: Generate Quiz| B[🌐 Streamlit Frontend]
     B --> C[🧠 Question Generator Logic]
-    C --> D[📦 Prompt Templates & Helper Functions]
-    C --> E[🔗 "Groq LLM API: LLaMA-3-8B-Instant"]
+    C --> D[📦 Prompt Templates + Helper Functions]
+    C --> E[🔗 Groq LLM API LLaMA-3.1-8B-Instant]
+
     E -->|Response: Generated Questions| C
     C --> B
     B -->|Render Quiz| A
 
-    subgraph 💠 Deployment
-        B --> F[🐳 Docker Container]
-        F --> G[Kubernetes Pod: llmops-app]
-        G --> H[☁️ GCP VM Instance]
-        H -->|Exposed| A
+    subgraph Deployment
+      F[🐳 Docker Container] --> G[Kubernetes Pod llmops-app]
+      G --> H[☁️ GCP VM Instance]
     end
 
-    subgraph 🔄 CI/CD
-        I[🔧 Jenkins] --> J[📥 Build & Push Docker Image]
-        J --> K[🚀 ArgoCD]
-        K --> G
+    B --> F
+    F --> G
+    G --> H
+
+    subgraph CI/CD
+      I[🔧 Jenkins] --> J[📥 Build & Push Docker Image]
+      J --> K[🚀 ArgoCD]
+      K --> G
     end
+
+    H -->|Exposed| A
 
 ```
 ---
