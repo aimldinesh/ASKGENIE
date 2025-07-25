@@ -2,7 +2,6 @@
 ![LLM Model](https://img.shields.io/badge/LLM-Groq--LLaMA3--70B-ff69b4)
 ![Deployment](https://img.shields.io/badge/deployment-Kubernetes%20on%20GCP-blueviolet)
 ![Docker](https://img.shields.io/badge/docker-ready-blue)
-![ArgoCD](https://img.shields.io/badge/ArgoCD-Synced-brightgreen?logo=argo)
 ![ArgoCD Dev](https://img.shields.io/badge/ArgoCD--Dev-Synced-brightgreen?logo=argo)
 ![ArgoCD Prod](https://img.shields.io/badge/ArgoCD--Prod-Healthy-brightgreen?logo=argo)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
@@ -208,5 +207,4 @@ For detailed end-to-end deployment steps—including Docker build, Kubernetes de
 Credit: Huge thanks to Data Guru for the full setup documentation that made this deployment seamless.
 
 ## 📄 License
-
-This project is licensed under the [MIT License](./LICENSE).
+This project is licensed under the [MIT License](LICENSE).
