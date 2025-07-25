@@ -6,12 +6,13 @@
 ![ArgoCD Dev](https://img.shields.io/badge/ArgoCD--Dev-Synced-brightgreen?logo=argo)
 ![ArgoCD Prod](https://img.shields.io/badge/ArgoCD--Prod-Healthy-brightgreen?logo=argo)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/github/license/yourusername/AskGenie)
+![Last Commit](https://img.shields.io/github/last-commit/aimldinesh/ASKGENIE)
+![Issues](https://img.shields.io/github/issues/aimldinesh/ASKGENIE)
+[![MIT License](https://img.shields.io/github/license/aimldinesh/ASKGENIE)](./LICENSE)
 
 # 📘 AskGenie: AI-Powered Quiz Generator
 
 **AskGenie** is a real-time AI-powered quiz and fill-in-the-blank generation app built using **Groq’s Llama 3.1 (70B)** model (`llama3-70b-8192`). Users can instantly generate topic-specific quizzes by selecting the type, difficulty, and number of questions.
-
 This project follows full **MLOps + LLMOps** best practices — it is containerized with **Docker**, orchestrated using **Kubernetes**, and continuously delivered using **Jenkins + ArgoCD**.
 
 ---
