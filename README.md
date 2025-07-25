@@ -7,7 +7,6 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Last Commit](https://img.shields.io/github/last-commit/aimldinesh/ASKGENIE)
 ![Issues](https://img.shields.io/github/issues/aimldinesh/ASKGENIE)
-[![MIT License](https://img.shields.io/github/license/aimldinesh/ASKGENIE)](./LICENSE)
 
 # 📘 AskGenie: AI-Powered Quiz Generator
 
@@ -206,6 +205,3 @@ For detailed end-to-end deployment steps—including Docker build, Kubernetes de
 
 Credit: Huge thanks to Data Guru for the full setup documentation that made this deployment seamless.
 
-## 📄 License
-
-This project is licensed under the terms of the [MIT License](./LICENSE).
