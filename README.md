@@ -207,4 +207,5 @@ For detailed end-to-end deployment steps—including Docker build, Kubernetes de
 Credit: Huge thanks to Data Guru for the full setup documentation that made this deployment seamless.
 
 ## 📄 License
-This project is licensed under the [MIT License](LICENSE).
+
+This project is licensed under the terms of the [MIT License](./LICENSE).
