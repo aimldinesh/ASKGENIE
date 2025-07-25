@@ -834,7 +834,5 @@ http://<VM_EXTERNAL_IP>:9090
 - Jenkins will automatically trigger ArgoCD sync as part of the pipeline.
 - This completes the full GitOps pipeline successfully and automatically!
 
-### 🙏 Credits
-- Thanks **Data Guru** for documenting the complete setup process!
 ---
 
