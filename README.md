@@ -96,13 +96,50 @@ flowchart TD
 | ☁️ **Cloud**         | Google Cloud VM                     |
 
 ---
-## 📸 Screenshots
+## 📸 Project Screenshots
 
-### 🧠 Quiz Generation UI
-![Quiz UI](screenshots/ui.png)
+### 🔧 Jenkins CI/CD Pipeline
 
-### 🚦 ArgoCD Sync Status
-![ArgoCD](screenshots/argocd.png)
+- ✅ **Pipeline Start**
+
+  ![Jenkins Pipeline Start](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/Jenkins_pipeline/jenkins%20pipeline%20build%20start.PNG)
+
+- ✅ **Pipeline Success**
+
+  ![Jenkins Pipeline Success](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/Jenkins_pipeline/jenkins%20pipeline%20build%20success.PNG)
+
+---
+
+### 🐳 Docker Image Build
+
+- 📦 **Docker Images Built**
+
+  ![Docker Images](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/Docker_Image/docker_images.PNG)
+
+---
+
+### 🚀 ArgoCD Deployment
+
+- 🔄 **ArgoCD Sync and Health Status**
+
+  ![ArgoCD Sync](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/ArgoCD/argocd_image_1.PNG)
+
+---
+
+### 🎯 AskGenie App UI – Quiz Generation
+
+- 🧠 **MCQ Question Generation – Page 1**
+
+  ![MCQ Image 1](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/Quiz_Generation_ui/app_image_1_mcq.PNG)
+
+- 🧠 **MCQ Question Generation – Page 2**
+
+  ![MCQ Image 2](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/Quiz_Generation_ui/app_image_2_mcq.PNG)
+
+- ✍️ **Fill-in-the-Blank Question Interface**
+
+  ![Fill in the Blank](https://github.com/aimldinesh/ASKGENIE/blob/main/screenshots/Quiz_Generation_ui/app_image_3_fill_in_blank.png)
+
 
 ---
 ## 🧪 Local Setup
