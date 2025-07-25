@@ -137,5 +137,5 @@ For detailed end-to-end deployment steps—including Docker build, Kubernetes de
 
 [View Full Setup Instructions →](./complete_setup.md).
 
-Credit: Huge thanks to Data Guru for contributing the full setup documentation that made this deployment seamless.
+Credit: Huge thanks to Data Guru for the full setup documentation that made this deployment seamless.
 
