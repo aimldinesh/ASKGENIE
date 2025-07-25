@@ -31,7 +31,7 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
 
 ```mermaid
     flowchart TD
-        subgraph "🛠️ Development & Setup"
+        subgraph "🛠️ Dev & Setup"
             A1[📦 Project/API Setup]
             A2[⚙️ Configuration Code]
             A3[📄 Schemas & Models]
@@ -46,13 +46,13 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
             B1[🧪 Main Application]
         end
 
-        subgraph "📦 Versioning & Containerization"
+        subgraph "📦 Versioning + Docker"
             C1[📂 Code Versioning]
             C2[🐳 Dockerfile]
             C1 --> C2
         end
 
-        subgraph "🚀 Infrastructure Deployment"
+        subgraph "🚀 Infra Deploy"
             D1[📦 Kubernetes Manifests]
             D2[🖥️ GCP VM Setup]
             D1 --> D2
