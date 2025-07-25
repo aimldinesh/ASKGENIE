@@ -128,10 +128,11 @@ class QuizManager:
                     key=f"mcq_{i}",
                 )
             else:
+                st.markdown("**✍️ Enter your answer:**", unsafe_allow_html=True)
                 st.text_input(
-                    "✍️ Enter your answer:",
+                    label="",  # Empty label since we're already using markdown for it
                     key=f"fill_blank_{i}",
-                    label_visibility="visible",
+                    label_visibility="collapsed",  # Hides the default empty label
                 )
 
             st.markdown("</div>", unsafe_allow_html=True)

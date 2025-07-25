@@ -94,7 +94,7 @@ def main():
             "📄 Question Format", ["Multiple Choice", "Fill in the Blank"]
         )
         topic = st.text_input(
-            "📘 Quiz Topic", placeholder="e.g. Python, Biology, Algebra"
+            "📘 Quiz Topic", placeholder="e.g. Python, Machine Learning, History"
         )
         difficulty = st.selectbox("🚦 Difficulty Level", ["Easy", "Medium", "Hard"])
         num_questions = st.slider("🔢 Number of Questions", 1, 10, 5)
