@@ -4,6 +4,9 @@
 ![LLM Model](https://img.shields.io/badge/LLM-Groq--LLaMA3--70B-ff69b4)
 ![Deployment](https://img.shields.io/badge/deployment-Kubernetes%20on%20GCP-blueviolet)
 ![Docker](https://img.shields.io/badge/docker-ready-blue)
+![ArgoCD](https://img.shields.io/badge/ArgoCD-Synced-brightgreen?logo=argo)
+![ArgoCD Dev](https://img.shields.io/badge/ArgoCD--Dev-Synced-brightgreen?logo=argo)
+![ArgoCD Prod](https://img.shields.io/badge/ArgoCD--Prod-Healthy-brightgreen?logo=argo)
 
 # 📘 AskGenie: AI-Powered Quiz Generator
 
@@ -91,3 +94,51 @@ flowchart TD
 | ☸️ **Orchestration** | Kubernetes (Minikube / GKE)         |
 | 🔧 **CI/CD**         | Jenkins + GitHub + ArgoCD           |
 | ☁️ **Cloud**         | Google Cloud VM                     |
+
+---
+## 📸 Screenshots
+
+### 🧠 Quiz Generation UI
+![Quiz UI](screenshots/ui.png)
+
+### 🚦 ArgoCD Sync Status
+![ArgoCD](screenshots/argocd.png)
+
+---
+## 🧪 Local Setup
+```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/AskGenie.git
+cd AskGenie
+
+# 2. Create virtual environment & activate
+python -m venv venv
+source venv/bin/activate  # for Linux/macOS
+venv\Scripts\activate     # for Windows
+
+# 3. Install dependencies
+pip install -e .
+
+# 4. Set up Groq API key
+echo "GROQ_API_KEY=your_key_here" > .env
+
+# Run locally
+streamlit run app.py
+```
+--- 
+
+## 🐳 Docker Build & Run
+```bash
+# Build Docker image
+docker build -t askgenie .
+
+# Run container
+docker run -p 8501:8501 askgenie
+```
+
+## 🛠️ Full Setup Instructions
+
+For full setup and deployment instructions, check out the [complete_setup_instruction.md](./complete_setup_instruction.md) file.
+
+
+
