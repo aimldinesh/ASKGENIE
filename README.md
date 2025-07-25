@@ -28,7 +28,6 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
 - [🧪 Local Setup](#-local-setup)
 - [🐳 Docker Build & Run](#-docker-build--run)
 - [🛠️ Full CI/CD Deployment Setup Instructions](#️-full-cicd-deployment-setup-instructions)
-- [📄 License](#-license)
 
 ---
 
