@@ -1,12 +1,14 @@
-![Python](https://img.shields.io/badge/python-3.11-blue)
-![LLM Model](https://img.shields.io/badge/LLM-Groq--LLaMA3--70B-ff69b4)
-![Deployment](https://img.shields.io/badge/deployment-Kubernetes%20on%20GCP-blueviolet)
-![Docker](https://img.shields.io/badge/docker-ready-blue)
-![ArgoCD Dev](https://img.shields.io/badge/ArgoCD--Dev-Synced-brightgreen?logo=argo)
-![ArgoCD Prod](https://img.shields.io/badge/ArgoCD--Prod-Healthy-brightgreen?logo=argo)
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Last Commit](https://img.shields.io/github/last-commit/aimldinesh/ASKGENIE)
-![Issues](https://img.shields.io/github/issues/aimldinesh/ASKGENIE)
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3.11-blue" alt="Python">
+  <img src="https://img.shields.io/badge/LLM-Groq--LLaMA3--70B-ff69b4" alt="LLM Model">
+  <img src="https://img.shields.io/badge/deployment-Kubernetes%20on%20GCP-blueviolet" alt="Deployment">
+  <img src="https://img.shields.io/badge/docker-ready-blue" alt="Docker">
+  <img src="https://img.shields.io/badge/ArgoCD--Dev-Synced-brightgreen?logo=argo" alt="ArgoCD Dev">
+  <img src="https://img.shields.io/badge/ArgoCD--Prod-Healthy-brightgreen?logo=argo" alt="ArgoCD Prod">
+  <img src="https://img.shields.io/badge/build-passing-brightgreen" alt="Build Status">
+  <img src="https://img.shields.io/github/last-commit/aimldinesh/ASKGENIE" alt="Last Commit">
+  <img src="https://img.shields.io/github/issues/aimldinesh/ASKGENIE" alt="Issues">
+</p>
 
 # 📘 AskGenie: AI-Powered Quiz Generator
 
