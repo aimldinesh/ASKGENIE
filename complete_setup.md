@@ -35,7 +35,7 @@
 - **Clone your GitHub repo**
 
   ```bash
-  git clone https://github.com/yourusername/AskGenie.git
+  git clone https://github.com/aimldinesh/AskGenie.git
   ls
   cd AskGenie
   ls  # You can see here all contents of your project
@@ -571,18 +571,18 @@ Copy the entire content of `.kube/config` into a Notepad for backup and modifica
 
 The `config` file references files like:
 
-- `/home/gyrogodnon/.minikube/ca.crt`
-- `/home/gyrogodnon/.minikube/profiles/minikube/client.crt`
-- `/home/gyrogodnon/.minikube/profiles/minikube/client.key`
+- `/home/dinesh/.minikube/ca.crt`
+- `/home/dinesh/.minikube/profiles/minikube/client.crt`
+- `/home/dinesh/.minikube/profiles/minikube/client.key`
 
 We’ll **inline** the actual base64 content instead of using file paths.
 
 ##### 🔁 For Each of These 3 Files, Run:
 
 ```bash
-cat /home/gyrogodnon/.minikube/ca.crt | base64 -w 0; echo
-cat /home/gyrogodnon/.minikube/profiles/minikube/client.crt | base64 -w 0; echo
-cat /home/gyrogodnon/.minikube/profiles/minikube/client.key | base64 -w 0; echo
+cat /home/dinesh/.minikube/ca.crt | base64 -w 0; echo
+cat /home/dinesh/.minikube/profiles/minikube/client.crt | base64 -w 0; echo
+cat /home/dinesh/.minikube/profiles/minikube/client.key | base64 -w 0; echo
 ```
 
 Copy each base64 string and replace the corresponding `certificate-authority-data`, `client-certificate-data`, and `client-key-data` fields in your config file.
@@ -635,7 +635,7 @@ Click Save ✅
      ```bash
      kubectl cluster-info
      ```
-     (e.g., `https://192.168.49.2:8443`)
+     (e.g., `https://192.168.49.2:844`)
 6. Generate the script
 
 Copy the generated script and paste/save it — you’ll use it in your Jenkinsfile in the next stage.
@@ -665,11 +665,11 @@ Copy the generated script and paste/save it — you’ll use it in your Jenkinsf
   
 ```groovy
 sh '''
-argocd login 34.72.5.170:31704 --username admin --password $(kubectl get secret -n argocd argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d) --insecure
+argocd login 34.72.5.170:3170 --username admin --password $(kubectl get secret -n argocd argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d) --insecure
 '''
 ````
 
-> **Note:** Change `34.72.5.170:31704` to your ArgoCD server IP and port.
+> **Note:** Change `34.72.5.170:3170` to your ArgoCD server IP and port.
 
 ---
 
@@ -833,6 +833,8 @@ http://<VM_EXTERNAL_IP>:9090
 
 - Jenkins will automatically trigger ArgoCD sync as part of the pipeline.
 - This completes the full GitOps pipeline successfully and automatically!
-
 ---
+Credit: Huge thanks to Data Guru for the full setup documentation that made this deployment seamless.
+
+
 
