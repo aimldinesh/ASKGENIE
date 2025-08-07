@@ -128,7 +128,8 @@ graph TD
     G --> H
 
     subgraph CI/CD
-      I[🔧 Jenkins] --> J[📥 Build & Push Docker Image]
+      M[📬 GitHub WebHooks] --> I[🔧 Jenkins]
+      I --> J[📥 Build & Push Docker Image]
       J --> K[🚀 ArgoCD]
       K --> G
     end
@@ -204,10 +205,11 @@ Internally, it uses:
 ---
 
 ### 8. 🔧 Jenkins CI/CD
-- **Jenkins** automates the build and deployment pipeline:
-  - Detects code pushes on GitHub  
+- 📬 GitHub WebHooks notify Jenkins of every push to the repository
+- **Jenkins** automates the entire CI/CD workflow:
+  - Detects GitHub events via WebHook  
   - 📥 Builds & pushes the Docker image to a container registry  
-  - Triggers the 🚀 **ArgoCD** workflow
+  - 🚀 Triggers the ArgoCD sync process to update the deployment
 
 ---
 
@@ -234,16 +236,16 @@ Internally, it uses:
 ---
 
 ## 🛠️ Tech Stack
-| Layer                | Tools Used                                  |
-| -------------------- | ------------------------------------------- |
-| 💻 **UI**            | Streamlit                                   |
-| 🧠 **LLM**           | Groq API (`llama3-70b-8192`)                |
-| 🔗 **LLM Orchestration** | LangChain                             |
-| 🧪 **Backend**       | Python (Modular, Functional Design)         |
-| 🐳 **Container**     | Docker                                      |
-| ☸️ **Orchestration** | Kubernetes (Minikube / GKE)                 |
-| 🔧 **CI/CD**         | Jenkins + GitHub + ArgoCD                   |
-| ☁️ **Cloud**         | Google Cloud VM                             |
+| Layer                       | Tools Used                                                                 |
+| --------------------------- | -------------------------------------------------------------------------- |
+| 💻 **Frontend UI**          | Streamlit (Custom styled interface with forms & question rendering)        |
+| 🧠 **LLM Backend**          | Groq API (`llama3-70b-8192`)                                               |
+| 🔗 **LLM Orchestration**    | LangChain (Prompt management & API calls)                                  |
+| 🧪 **Backend Logic**        | Python (Modular, functional design: prompts, schemas, generators, helpers) |
+| 🐳 **Containerization**     | Docker (App + dependencies as portable image)                              |
+| ☸️ **Deployment**           | Kubernetes (Minikube for local, GKE for cloud)                             |
+| 🔧 **CI/CD**                | Jenkins (pipeline) + GitHub (code) + 📬 WebHooks + ArgoCD (GitOps deploy)  |
+| ☁️ **Cloud Infrastructure** | Google Cloud Platform (GCP VM Instance)                                    |
 
 ---
 ## 📸 Project Screenshots
