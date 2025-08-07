@@ -172,7 +172,7 @@ Internally, it uses:
 
 ---
 
-### 4. 🚀 Groq LLM API (LLaMA 3.1 8B Instant)
+### 4. 🚀 Groq LLM API (Groq’s LLaMA 3.1 (70B))
 - LangChain sends the prompt to the **Groq API**  
 - Groq uses the `llama3-70b-8192` model to generate quiz questions  
 - The API returns the questions in structured format (usually JSON or text)
