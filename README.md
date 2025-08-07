@@ -111,7 +111,7 @@ graph TD
     B --> C[🧠 Question Generator Logic]
     C --> D[📦 Prompt Templates + Helper Functions]
     C --> L[🔗 LangChain Orchestrator]
-    L --> E[🚀 Groq LLM API LLaMA-3.1-8B-Instant]
+    L --> E[🚀 Groq LLM API llama3-70b-8192]
 
     E -->|Response: Generated Questions| L
     L --> C
