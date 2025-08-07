@@ -1,22 +1,24 @@
 <p align="center">
   <img src="https://img.shields.io/badge/python-3.11-blue" alt="Python">
   <img src="https://img.shields.io/badge/LLM-Groq--LLaMA3--70B-ff69b4" alt="LLM Model">
+  <img src="https://img.shields.io/badge/langchain-integrated-orange" alt="LangChain">
   <img src="https://img.shields.io/badge/deployment-Kubernetes%20on%20GCP-blueviolet" alt="Deployment">
   <img src="https://img.shields.io/badge/docker-ready-blue" alt="Docker">
   <img src="https://img.shields.io/badge/ArgoCD--Dev-Synced-brightgreen?logo=argo" alt="ArgoCD Dev">
   <img src="https://img.shields.io/badge/ArgoCD--Prod-Healthy-brightgreen?logo=argo" alt="ArgoCD Prod">
   <img src="https://img.shields.io/badge/build-passing-brightgreen" alt="Build Status">
   <img src="https://img.shields.io/github/last-commit/aimldinesh/ASKGENIE" alt="Last Commit">
-  <img src="https://img.shields.io/github/issues/aimldinesh/ASKGENIE" alt="Issues">
+  <img src="https://img.shields.io/github/issues/aimldinesh/ASKGENIE" alt="GitHub Issues">
 </p>
 
 <div align="center">
 
-# 📘 AskGenie: AI-Powered Quiz Generator
+# 📘 AskGenie: AI-Powered Quiz Generator with LLM + LangChain + MLOps
 
-**AskGenie** is a real-time AI-powered quiz and fill-in-the-blank generation app built using **Groq’s Llama 3.1 (70B)** model (`llama3-70b-8192`).  
-Users can instantly generate topic-specific quizzes by selecting the type, difficulty, and number of questions.  
-This project follows full **MLOps + LLMOps** best practices — it is containerized with **Docker**, orchestrated using **Kubernetes**, and continuously delivered using **Jenkins + ArgoCD**.
+**AskGenie** is a real-time, AI-powered quiz generator that uses **Groq’s LLaMA 3.1 (70B)** model (`llama3-70b-8192`) orchestrated via **LangChain** for generating multiple-choice and fill-in-the-blank questions.  
+Users can instantly generate quizzes based on selected topic, difficulty, and question type.
+
+The project follows full **LLMOps + MLOps** best practices — containerized with **Docker**, orchestrated using **Kubernetes**, and continuously deployed via **Jenkins + ArgoCD** on **Google Cloud Platform (GCP)**.
 
 </div>
 
@@ -45,6 +47,7 @@ This project follows full **MLOps + LLMOps** best practices — it is containeri
 
 - 🔍 **Custom Quiz Generation** – Choose **topic**, **question type** (MCQ/Fill in the Blank), **difficulty**, and **number of questions**
 - ⚙️ **Groq LLM Integration** – Uses **Groq API** with `llama3-70b-8192` for fast, context-rich question generation
+- 🔗 **LangChain Orchestration** – Modular and scalable LLM workflow management using **LangChain** for prompt routing and question handling
 - 🎯 **Streamlit UI** – Intuitive, responsive interface for a seamless user experience
 - 🐳 **Dockerized App** – Lightweight, portable, and production-ready
 - ☸️ **Kubernetes Deployment** – Scalable app deployed on **GCP VM** (via Minikube or GKE)
@@ -107,9 +110,11 @@ graph TD
     A[🧑 User] -->|Request: Generate Quiz| B[🌐 Streamlit Frontend]
     B --> C[🧠 Question Generator Logic]
     C --> D[📦 Prompt Templates + Helper Functions]
-    C --> E[🔗 Groq LLM API LLaMA-3.1-8B-Instant]
+    C --> L[🔗 LangChain Orchestrator]
+    L --> E[🚀 Groq LLM API LLaMA-3.1-8B-Instant]
 
-    E -->|Response: Generated Questions| C
+    E -->|Response: Generated Questions| L
+    L --> C
     C --> B
     B -->|Render Quiz| A
 
@@ -129,11 +134,10 @@ graph TD
     end
 
     H -->|Exposed| A
-
 ```
 ---
 
-## Step-by-step: How It Works
+## ✅ Step-by-step: How It Works
 
 ### 1. 🧑 User Interaction
 The user opens the web interface and sends a request to generate a quiz.  
@@ -157,17 +161,18 @@ This is the core engine of the app.
 It handles:
 - Input validation  
 - Prompt formatting  
-- Calling the LLM API  
+- Calling the LLM via orchestrator  
 - Parsing the response  
 
 Internally, it uses:
 - 📦 **Prompt Templates**: Pre-defined templates for consistent LLM requests  
-- 🧰 **Helper Functions**: Functions for formatting, error handling, and JSON processing
+- 🧰 **Helper Functions**: Functions for formatting, error handling, and JSON processing  
+- 🔗 **LangChain**: Manages prompt handling and Groq API interaction
 
 ---
 
-### 4. 🔗 Groq LLM API (LLaMA 3.1 8B Instant)
-- The app sends the formatted prompt to the **Groq API**  
+### 4. 🚀 Groq LLM API (LLaMA 3.1 8B Instant)
+- LangChain sends the prompt to the **Groq API**  
 - Groq uses the `LLaMA-3.1-8B-Instant` model to generate quiz questions  
 - The API returns the questions in structured format (usually JSON or text)
 
@@ -229,15 +234,16 @@ Internally, it uses:
 ---
 
 ## 🛠️ Tech Stack
-| Layer                | Tools Used                          |
-| -------------------- | ----------------------------------- |
-| 💻 **UI**            | Streamlit                           |
-| 🧠 **LLM**           | Groq API (`llama3-70b-8192`)        |
-| 🧪 **Backend**       | Python (Modular, Functional Design) |
-| 🐳 **Container**     | Docker                              |
-| ☸️ **Orchestration** | Kubernetes (Minikube / GKE)         |
-| 🔧 **CI/CD**         | Jenkins + GitHub + ArgoCD           |
-| ☁️ **Cloud**         | Google Cloud VM                     |
+| Layer                | Tools Used                                  |
+| -------------------- | ------------------------------------------- |
+| 💻 **UI**            | Streamlit                                   |
+| 🧠 **LLM**           | Groq API (`llama3-70b-8192`)                |
+| 🔗 **LLM Orchestration** | LangChain                             |
+| 🧪 **Backend**       | Python (Modular, Functional Design)         |
+| 🐳 **Container**     | Docker                                      |
+| ☸️ **Orchestration** | Kubernetes (Minikube / GKE)                 |
+| 🔧 **CI/CD**         | Jenkins + GitHub + ArgoCD                   |
+| ☁️ **Cloud**         | Google Cloud VM                             |
 
 ---
 ## 📸 Project Screenshots
