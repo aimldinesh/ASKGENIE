@@ -13,7 +13,7 @@
 
 <div align="center">
 
-# 📘 AskGenie: AI-Powered Quiz Generator with LLM + LangChain + MLOps
+# 📘 AskGenie: AI-Powered Quiz Generator with LLM + LangChain + MLOps + LLMOps
 
 **AskGenie** is a real-time, AI-powered quiz generator that uses **Groq’s LLaMA 3.1 (70B)** model (`llama3-70b-8192`) orchestrated via **LangChain** for generating multiple-choice and fill-in-the-blank questions.  
 Users can instantly generate quizzes based on selected topic, difficulty, and question type.
