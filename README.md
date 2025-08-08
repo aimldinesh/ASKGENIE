@@ -299,7 +299,7 @@ Before running the project, ensure you have the following installed:
 - Docker
 - Groq API Key (signup at [Groq Cloud](https://console.groq.com/))
 - GCP VM or Localhost for deployment
-- (Optional) Jenkins, ArgoCD if deploying CI/CD pipeline
+- (Optional) Jenkins, ArgoCD if deploying CI/CD pipeline.
 
 ## 🧪 Local Setup
 ```bash
