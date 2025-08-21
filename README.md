@@ -168,7 +168,7 @@ It handles:
 Internally, it uses:
 - 📦 **Prompt Templates**: Pre-defined templates for consistent LLM requests  
 - 🧰 **Helper Functions**: Functions for formatting, error handling, and JSON processing  
-- 🔗 **LangChain**: Manages prompt handling and Groq API interaction
+- 🔗 **LangChain**: Manages prompt handling and Groq API interaction.
 
 ---
 
